@@ -1,0 +1,65 @@
+@charset "utf-8";
+/*공통*/
+body{margin: 0; font-family:'AppleGothicNeo','NotoSansKR',고딕,sans-serif;}
+a{display: block; text-decoration: none;color: black;}
+ul{list-style: none; padding: 0;margin:0;}
+
+/**header**/
+header{position: relative;background-color:#fff; height: 60px;display: flex; justify-content: center;align-items: center;}
+header h1{display: flex; justify-content: center;margin: 0;}
+header h1 img {width: 200px; }
+header .gnb, header .lang {display: none;}
+header .lang li a span{font-weight: bold;}
+
+header .burger img, .dashed img{display: block; width: 20px;}
+header .burger { position: absolute; top: 25%; left: 3%;}
+header .dashed{position: absolute; top: 25%; right: 3%;}
+
+/*lists*/
+main .lists{display: flex; flex-direction: column; width: 100%;margin: 0;}
+main .lists li{border-bottom: 1px solid #c4c4c4; padding: 10px;}
+
+/**footer**/
+footer{background-color: #1e1e1e; color: white;width:100%; display: flex; flex-direction: column; align-items: center; padding: 20px; box-sizing: border-box;}
+footer img{ width: 200px; }
+footer ul li a{color: #b5b5b5;}
+footer .lnb{display: flex; flex-wrap: wrap; height: 100px; justify-content: center;margin: 30px 20px 30px 40px;}
+footer .lnb li{ width: 135px; }
+footer .sns{display: flex; margin-bottom: 20px; }
+footer .sns li{margin: 1.2vw;}
+footer .sns li a img{width: 25px;}
+footer p{font-size: 0.8em;color: #b5b5b5; margin: 0;}
+
+
+/*PC*/
+@media screen and (min-width:1440px){
+  body{font-family: 'NotoSansKR';
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 58px;}
+  /*header*/
+  header{display: flex; justify-content: space-around; align-items: center;}
+  header .burger, header .dashed{display: none;}
+  header h1{ width: 200px; margin: 12px;}
+  header .gnb{display: block; display: flex; justify-content: space-around; width: 40%;}
+  header .lang{display: block; width: 80px;  display: flex; justify-content: space-between; text-transform: uppercase;font-size: 14px;font-family: 'AppleGothicNeoL';}
+  header .gnb li:hover a{
+          color: rgb(224, 0, 0);
+  } 
+
+   /**footer**/
+   footer{ display: flex; flex-direction: row; position: relative; padding: 5%; }
+   footer > img{ position: absolute; top: 15%; }
+
+   footer .lnb {display: flex; position: absolute;  right: 3%;top:10px; min-width: fit-content;margin: 0; height: auto;}
+   footer .lnb li{padding-right:20px;width:auto; height: auto;}
+   footer .sns{ position: absolute; bottom: 5%; right: 5.5%;margin: 0;}
+   footer .sns li{ margin:0;margin-right: 8%;}
+   footer p{position: absolute; bottom:7%;}
+
+ 
+
+}
+/*드래그 컬러*/
+::selection{background:rgba(107, 182, 74,0.99)}
+img::selection{background:none}

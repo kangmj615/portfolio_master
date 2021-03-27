@@ -1,0 +1,120 @@
+@charset "utf-8";
+/*공통*/
+
+/*header*/
+.sticky{position: fixed;z-index: 1111;width: 100%;} 
+header{border-bottom: 1px solid #c4c4c4;}
+header .gnb  li a{text-decoration: none; font-weight: 600;}
+.additional{border-bottom: 1px solid #c4c4c4;background-color: white;width: 100%;}
+.explain{display: flex; justify-content: space-between; margin: 0 12px; height: 46px; display: flex;align-items: center;}
+.explain2{display: none;}
+.explain li a{background: url(cokeimages/sns-svg/ico_spriteimg.png) no-repeat; background-position: -370px -125px; width: 25px; text-indent: -9999px;}
+
+/*slider*/
+.item img:first-child{display: none;}
+/*main*/
+main{ background-color: #e5e5e5;}
+.mainwrap{padding:0 20px; font-weight: 900;font-size:50px; box-sizing: border-box;}
+.mainwrap h4{color: #999999;font-size: 15px;padding-top: 140px;margin: 0;}
+.mainwrap p{margin-top: 90px;font-size: 20px;line-height: 32px;letter-spacing: -1px;font-weight: 700;}
+.mainwrap p:nth-of-type(2){margin-top: 20px; margin-bottom:90px;}
+.mainwrap .card{margin-top: 4.4444444vw; }
+
+.card .flipper {display:block;background-color: white;border-radius: 10px;margin: 15px;position: relative; height: 495px; perspective: 1000px;}
+.card .back{display: none;}
+.card .flipper .front .logos{height: 300px;display: flex; align-items: center;}
+.card .flipper .front img{display:block; width:300px;margin:auto;  }
+
+.card .flipper .front p{font-weight: bold; font-size: 28px; 
+  /* height: 180px; */
+  margin:0;
+  /* padding-top: 5.555555vw; */
+  padding-right: 6.666666vw;
+  padding-bottom: 40px;
+  padding-left: 12vw;
+  line-height: 1.6;
+  letter-spacing: -.277777vw;}
+.card .flipper .front > a{ text-indent: -9999px;background:url(cokeimages/sns-svg/ico-plus.svg)no-repeat;
+  width: 37px;height: 37px; position:absolute;left: 12vw;
+  bottom: 24px;
+  right: auto;
+  top: auto;}
+
+  /*arrow fixed*/
+main > a > img{display: block;margin: auto;padding: 70px 0;}
+
+/*lists*/
+main .lists{background-color: white;}
+main .lists li a{color: black;}
+
+/**footer**/
+footer{display: flex;}
+
+
+/*tablet*/
+@media screen and (min-width:600px){
+  .item img:first-child{display: block; height: max-content; width: 100%;}
+  .item img:last-child{display: none; }
+
+  /*main*/
+  .card .flipper .front .logos{height: 300px;display: flex; align-items: center;}
+  .card .flipper .front img{ width:350px;margin: 20px auto;  }
+
+  .card .flipper .front p{font-weight: bold; font-size: 30px; }
+  .card .flipper .front > a{ 
+    background-size: contain;
+    position:absolute;left: 12vw;
+    bottom: 10%;
+    right: auto;
+    top: auto;}
+
+}
+
+/*PC*/
+@media screen and (min-width:1240px){
+  /*header*/
+  header h1{border: none; margin-bottom: 12px;font-size: 18px;}
+  .additional{border-top:1px solid #b7b7b7;border-bottom:1px solid #b7b7b7;}
+  .explain{ display: none;font-size: 14px;line-height: 22px;}
+  .explain2{display: block;; display: flex;  align-items: center; margin-left: 7.5%;
+    height: 62px;}
+  .explain2 li:nth-child(even){ width: 31px; text-align: center;}
+  .explain2 li:last-child{font-weight: bold;}
+
+  /*slider*/
+  .item img:first-child{height: auto;}
+
+  /*main*/
+  main{ background-color: #e5e5e5; padding-bottom:15%;}
+
+  .mainwrap{width: 1160px; margin: 0 auto;padding-right: 200px; box-sizing: border-box;}
+  .mainwrap p{font-size: 36px;line-height: 56px;}
+  .card{ display: block; margin-top: 210px ;}
+  .card .flipper{width: 1160px;margin: 0 auto;height: 680px;margin-bottom: 3%; display: flex;
+     border-radius: 20px; }
+  .card .flipper .front {width: 50%;display: flex; align-items: center;justify-content: center; box-sizing: border-box;padding: 2% 0 2% 4%;}
+  .card .flipper:nth-child(odd) .front{padding: 2% 0 2% 4%;}
+  .card .flipper .left { order: 2;}
+  .card .flipper .right{ order: 1;}
+  .card .flipper .back{display: block;font-weight: 700;height: 100%; width: 50%;padding-top: 52px;padding-right: 60px;padding-bottom: 58px;
+  padding-left: 100px;box-sizing: border-box;font-weight: 700;}
+  .card .flipper .back h2{font-size: 36px; line-height: 50px; letter-spacing: -1.5px; font-weight: bold;}
+
+  .card .flipper .front .logos{height: 300px;display: flex; align-items: center;}
+  .card .flipper > .front img{display:block; width:90%;margin: 0;}
+
+  .card .flipper .front p,.card .flipper .front a{display: none;}
+  .card .flipper .back h2{font-size: 36px;line-height: 50px;letter-spacing: -1.5px;}
+  .card .flipper .back .parabox{ margin-top: 20%;}
+  .card .flipper .back .parabox, .parabox ~ p{margin-top: 15px;font-weight: 500;font-size: 18px;  line-height: 30px; letter-spacing: -.5px;}
+  .card .flipper .back h2+p{margin-top: 5%;}
+  .card .flipper .back p.parabox{margin-top: 25%;}
+  .card .flipper .back > div{margin-top: 50px;}
+  .card .flipper .back .tags span{ font-size: 18px;letter-spacing: -.5px; font-weight: 500; color: #999;}
+  main > a{width: 20px;position: fixed;right: 5%; bottom: 10%;}
+  main .lists{display: none;}
+  /*arrowup fixed JS*/
+   main > a {position: fixed; bottom: 10%; right: 5%; visibility: hidden; opacity: 0;transition: 0.3s;width: 43px; height: 43px; background-color: #1e1e1e;border-radius: 50%; position: fixed;}
+   .arrowup.activename{visibility: visible; opacity: 1;}
+   main a.arrowup img{position: absolute; top: 50%; left: 50%;
+    transform: translate(-50%,-50%); padding: 0;}

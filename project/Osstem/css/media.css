@@ -1,0 +1,119 @@
+@charset "utf-8";
+/*mobile*/
+@media screen and (max-width:1024px){
+  body{font-family: 'AppleGothicNeo','Noto Sans KR',sans-serif;}
+  .gnb{height: 80px; }
+  .gnb #logo img{width: 130px;top:20px;left: 30px;}
+ 
+  .gnb .inner{
+    z-index: 99; background-color: white; position: fixed; top: 0; right: 0; height: 100vh; padding-top: 150px; display: none; min-width: 500px; max-width: 500px;}
+  .gnb .inner.active{display: block;}
+  .gnb .inner > li > a{color: black; z-index:3;font-weight: 600;}
+  .gnb .inner > li > a:active .gnb .inner .detail{  display: block; }
+  /* header:hover .gnb .inner .detail{display: none;} */
+  .gnb .inner .detail{padding-left: 300px;display: none;}
+  .gnb .inner .detail:after{display: none;}
+  .gnb .bar { top: 16px;right: 30px;z-index: 100;}
+  .gnb .bar img{width: 30px; }
+  .gnb .bar img:hover .gnb .inner{display: block;}
+  .wrapper #section1 .promo { width: 85%;  top: 28%;}
+  .wrapper #section1 .promo h2 { font-size: 4rem; line-height: 3rem;}
+  #section1 .promo p { width: 100%;  line-height: 1.4;}
+  .wrapper #section1 .promo > p {  font-size: 1.8rem; line-height: 1.2; }
+  .scroll{display: none;}
+/*page 2*/
+  /*common*/
+  .neat {  padding: 150px 100px;}
+  .promo{width: 100%;}    
+  .wrapper .promo p { width: auto;line-height: 1.4;}
+  .wrapper .promo > p {  font-size: 1.8rem;}
+  .wrapper #section2 .promo h2 { margin-top: 29px;}
+
+  .promo .num p{ font-size: 14px;}
+/*개별*/
+  .wrapper #section2 .promo h2 {font-size: 4rem; line-height: 3rem;  width: 600px; }
+  .earth { width: 470px; height: 490px; position: absolute; left: 50%; transform: translateX(-50%); margin-top: 150px;}
+  .earth .motion .earth-img {height: 350px; top: 90px;}
+  .earth .motion .earth-line1 { width: 280px; height: 280px; bottom: 16.5%; right: 110px;}
+  .earth .motion .earth-line2 { width: 280px; height: 280px; bottom: 16.5%; right: 110px;}
+  .circles .circle { width: 120px;  height: 120px;  position: absolute; padding-top: 45px; font-size: 18px; }
+  .circles .circle1 { top: 5%;left: 10px;}
+  .circles .circle2 {  top: 11%;right: 20px;}
+  .circles .circle3 { bottom: 0%;right: 15px;}
+  .circles .circle3 a{ width: auto;}
+  .circles .circle4 { bottom:0%;left: 0px; }
+/*page3*/
+  .wrapper #section3 .promo h2 { font-size: 4rem; line-height: 3rem; width: 100%;}
+  .wrapper #section3 .promo p { width: 100%;}
+  #section3 .box{top: 60%; left: 4%; height: 400px; width: 90vw; flex-direction: column; align-items: center; }
+  #section3 .box .boxes {width: 90%; height: 120px;margin-top: 10px; display: flex; align-items: center; justify-content: space-around; box-sizing: border-box; position: static; font-size: 1.8rem;}
+  #section3 .box p{ width:80%; line-height: 1.4;}
+  #section3 .box .boxes img { position: static;width: 40px;}
+  #section4 .bgphoto4 { background: url(../images/background-hand-m.png) no-repeat center/cover;  z-index: -1;}
+  .wrapper #section4 .promo h2 { font-size: 4rem; line-height: 3rem;}
+  .hand .diamonds { width: 500px; height: 500px; position: relative; left: 50%; transform: translateX(-50%);}
+  .hand .diamonds .diamond { width: 180px; height: 180px;  line-height: 25px; font-size: 20px; }
+  .hand .diamonds .diamond a { margin-top: 18px;  width: 130px; }
+  .hand .diamonds .diamond1 { top: 20px; right: 50%; }
+  .hand .diamonds .diamond2 { top: 9%;  right: 10%;}
+  .hand .diamonds .diamond3 { top: 50%; right: 15%; }
+  .hand .diamonds .diamond4 {top: 45%;right: 55%; }
+  #section5 h2 { font-size: 4rem;}
+  #section5 .neat .wrap {  width: 820px; margin-bottom: 3vw;}
+  #section5 .neat .wrap:nth-of-type(3) { height: 300px;}
+  #section5 .neat .wrap:first-of-type(1) span{margin-bottom: 10px;}
+  .wrap span { margin-top: 20px; font-size: 0.875rem;}
+  .wrap h3 { margin-top: 25px; font-size: 1.333rem; line-height: 1.4;}
+  footer{overflow: hidden;}
+ }
+
+ @media screen and (max-width:768px){
+  .gnb{height: 50px; }
+  .gnb #logo img{width: 100px;   top: 10px; left: 25px;}
+  .gnb .inner { min-width: 300px; max-width: 500px;}
+  .gnb .bar { top: 7px;right: 25px;}
+  .gnb .bar img{width: 25px; }
+  .wrapper #section1 .promo { width: 89%; top: 28%;}
+  .wrapper #section1 .promo h2 { font-size: 2.2rem; line-height: 3rem;}
+  .wrapper #section1 .promo > p {  font-size: 18px; line-height: 1.2;}
+  .wrapper #section1 .down { height: auto;} 
+  .neat {padding: 50px 20px;}
+  .wrapper .promo p {  width: 320px;line-height: 1.2;}
+  .promo .num p{ font-size: 14px; }
+  .wrapper #section2 .promo h2 {font-size: 2.2rem;line-height: 3rem;width: 340px;}
+  .wrapper .promo > p { font-size: 18px;}
+  .earth { width: 300px; height: 350px; position: absolute; bottom: 10%;right: 10%;margin-top: 50px;}
+  .earth .motion .earth-img { height: 200px; top: 80px;left: -10}
+  .earth .motion .earth-line1 { width: 200px; height: 200px;bottom: 20%; right:50px;}
+  .earth .motion .earth-line2 { width: 190px; height: 190px; bottom: 20%; right: 50px;}
+  .circles .circle { width: 70px; height: 70px; position: absolute; padding-top: 26px; font-size: 12px;}
+  .circles .circle1 { top: 10%;left: 25px;}
+  .circles .circle2 { top: 12%;right: 25px;}
+  .circles .circle3 { bottom: 0%;padding: 25px 10px 0;}
+  .circles .circle4 { bottom:5%;left: 20px; }
+
+  .scroll{display: none;}
+
+  .wrapper #section3 .promo h2 {  font-size: 2.2rem;  line-height: 3rem;  width: 260px; }
+  .wrapper #section3 .promo p { width: 100%;}
+  #section3 .box{ bottom: 50%; right: 0%; height: 220px; width: auto; flex-direction: column; align-items: center;}
+  #section3 .box .boxes { height: 70px; margin-top: 10px; display: flex;align-items: center;justify-content: space-around;box-sizing: border-box;position: static;font-size: 14px;}
+  #section3 .box p{ margin: 0; width: 225px;}
+  #section3 .box .boxes img {position: static;width: 28px;}
+  #section4 .bgphoto4 { background: url(../images/background-hand-m.png) no-repeat center/cover;z-index: -1;}
+  .wrapper #section4 .promo h2 {font-size: 2.2rem; line-height: 3rem;}
+  .hand .diamonds {width: 335px;height: 330px;  position: relative; }
+  .hand .diamonds .diamond {width: 100px;height: 100px;padding:15px 10px 10px 15px;line-height: 25px; font-size: 14px; }
+  .hand .diamonds .diamond1 {  top: 45px;  right: 50%;}
+  .hand .diamonds .diamond2 {top: 65px;right: 16%; }
+  .hand .diamonds .diamond3 { top: 175px; right: 20.36%; }
+  .hand .diamonds .diamond3 a{ padding-top: 10px; padding-left: 8px;}
+  .hand .diamonds .diamond4 { top: 166px; right: 55%; }
+  .hand .diamonds .diamond a { width: max-content;  }
+ 
+  #section5 h2 { font-size: 2.2rem; line-height: 3rem; width: 340px;}
+  #section5 .neat .wrap { width: 325px; margin-bottom: 3vw;  }
+  #section5 .neat .wrap:nth-of-type(3) { height: 300px;}
+  .wrap span { margin-top: 20px; font-size: 0.875rem;}
+  .wrap h3 {  margin-top: 25px; font-size: 1.333rem;  line-height: 1.4;}
+ } 

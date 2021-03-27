@@ -1,0 +1,185 @@
+@charset "utf-8";
+body{font-family: 'Noto Sans KR',sans-serif;
+  /*hide scroll*/overflow-y: scroll;-ms-overflow-style: none;  /* IE and Edge */scrollbar-width: none;  /* Firefox */}
+body::-webkit-scrollbar {display: none;}
+ul{list-style:none ;margin: 0;padding: 0;}
+
+/*navigation*/
+header{
+  transition:.3s; position: fixed;top:0; left: 0; z-index: 10; width: 100%; background-color: rgba(0, 0, 1, 0.1);
+}
+/*헤더에 호버되면~*/
+header:hover {background-color: white;}
+header:hover .gnb .inner > li> a{color:black}
+header:hover .gnb .bar img{display: none;}
+header:hover .gnb .bar img:nth-child(2){display: block;}
+header:hover .gnb .inner .detail{display: block;}
+
+
+.container{overflow: hidden;} /*애니메이션에 필요*/
+.gnb{padding: 0 80px; max-width: 1920px;display: flex;justify-content: center;height: 100px; background-color: transparent; }
+.gnb h1{margin: 0;}
+.gnb h1 img{width: 150px;position: absolute; top: 25px;left: 35px;}
+.gnb .inner{min-width: 920px;max-width: 1080px;;display: flex;justify-content: space-between;}
+
+.gnb .inner > li> a{display: block; height: 100px; line-height: 100px; text-decoration: none; color: white; text-align: center; font-weight: 400; font-size: 20px; width:170px}
+/*햄버거바*/
+.gnb .bar{position: absolute;text-align: center; width: max-content; top: 25px;right: 50px; cursor: pointer;}
+.gnb .bar img{width: 30px;}
+.gnb .bar img:nth-child(2){display: none;}
+.gnb .bar img:nth-child(3){display: none; height: 28px;position: absolute;top: 5px;right: 2px}
+
+/*inside the navigation # */
+.gnb .inner .detail{height: 270px;width: 170px; display: none; border-right: 1px solid #e1e1e15e; z-index: 1; box-sizing: border-box;padding-left: 13px;}
+/*inside the navigation background # */
+.detail:after{content:'';background-color: white; height: 270px;z-index: -1; width: 100%;position: absolute;top: 100px;left: 0;border-bottom: 1px solid #e1e1e1; border-top:1px solid #e1e1e1 ;}
+
+.gnb .inner li:first-child .detail{border-left:  1px solid #e1e1e15e;}
+.gnb li .detail li{width: 100%;padding: 10.5px; }
+.gnb li .detail li:first-child{padding-top: 30px;}
+.gnb li .detail li a{width: 120px;display: block;text-decoration: none; color: black;font-size: 0.875rem;word-break: break-all;} 
+
+/*main*/
+/*first page*/
+.wrapper{scroll-snap-type: y mandatory;}
+section{scroll-snap-align:start ;}
+
+#section1{background-color: rgba(0, 0, 10, 0.63);width: 100%; height: 100vh; position: relative;} 
+.wrapper #section1 .bgphoto{background: url(../images/young-male-psysician.jpg) ;
+  width: 100%;height: 100vh ; background-repeat: no-repeat;background-position: center 60%;
+  background-size: cover;position: absolute; top: 0;z-index: -1;}
+
+.wrapper #section1 .promo{
+  color: white;width: 65%;position: absolute;top: 45%; left: 50%;transform: translate(-50%,-45%);text-align: center;
+}
+
+.wrapper #section1 .promo h2{
+  font-size: 4.706rem;line-height: 6.1rem;}
+.wrapper #section1 .promo p{margin: 0;}
+.wrapper #section1 .promo > p{font-size: 20px;}
+.wrapper #section1 .down{background: url(../svg/arrow-down.svg) no-repeat center/contain; width: 35px;height: 35px;position: absolute;left: 50%; transform: translateX(-50%);text-indent: -9999px;animation-name: goingdown; animation-duration: 1.5s; animation-iteration-count:infinite;}
+@keyframes goingdown{
+  from{ 
+    transform: translate(0, 20px);
+    opacity: 1;
+  }
+
+  to {
+    transform: translate(0, 45px);
+    opacity: 0;
+  }
+} 
+/*second page*/
+#section2{position: relative; }
+#section2 .bgphoto2{background: url(../images/bg_main_02.jpg)no-repeat center/cover; width: 100%;height: 100vh;position: absolute; top: 0;z-index: -1;
+}
+/*common*/
+.neat{padding: 150px 150px 140px ;width: 100%; height: 100vh;box-sizing: border-box;}
+.promo{color: white;width: 65%;text-align: center; }
+.wrapper #section2 .promo h2{font-size: 4.1rem;line-height: 4.7rem; width: 600px;text-align: left; margin-top: 0px;}
+.wrapper #section2 .promo p{margin: 0;text-align: left;}
+
+/*number*/
+.num p:first-child{text-transform: uppercase; padding: 20px 0 10px 0; margin: 0;}
+.num .border{border-bottom: 2px solid rgba(255, 255, 255, 0.8); width: 80px; position: absolute;}
+.num .border span{text-indent: -9999px;border-bottom: 1px solid rgba(179, 179, 179, 0.527); width: 180px; display: block; position: absolute;bottom: -2px;}
+.num p:last-child{padding-top: 20px;}
+
+/*earth*/
+.earth {width: 500px;height: 500px;position: absolute;top: 35%; right: 10%;
+}
+
+.earth .motion .earth-img{ text-indent: -9999px; background: url(../images/img_earth.png) no-repeat center/contain; width: 350px; height: 350px;  position: absolute;bottom: 18%; right: 14%; animation-name: earth;animation-duration: 80s;}
+
+@keyframes earth{
+  0%{transform:rotate(0);}
+  25%{transform: rotate(20deg);}
+  50%{transform:rotate(0);}
+  75%{transform: rotate(-20deg);}
+  100%{transform:rotate(0deg);}
+}
+
+.earth .motion .earth-line1{text-indent: -9999px; background: url(../images/earth_line_front.png) no-repeat center/contain;width: 400px; height: 300px; position: absolute;bottom: 22%; right: 10%;  animation-name: frontline; animation-duration: 80s;  animation-iteration-count:infinite;}
+@keyframes frontline{
+  0%{transform:rotate(0);}
+  50%{transform:rotate(-180deg);}
+  100%{transform:rotate(0);}
+}
+
+.earth .motion .earth-line2{text-indent: -9999px; background: url(../images/earth_line_back.png) no-repeat center/contain; width: 300px; height: 300px;  position: absolute; bottom: 22%; right: 20%;  animation-name: backline; animation-duration: 80s;animation-iteration-count:infinite;}
+@keyframes backline{
+  0%{transform:rotate(0)}
+  50%{transform:rotate(180deg)}
+  100%{transform:rotate(0)}
+}
+/*동글이들*/
+.circles .circle{width: 95px; height: 95px; border-radius: 50%; background-color: rgba(122, 122, 122, 0.288); position:absolute;padding-top: 36px;box-sizing: border-box; transition: 0.3s; }
+.circles .circle1{position: absolute; top: 3%;left: 11%;}
+.circles .circle2{position: absolute; top: 10%; right: 11%;}
+.circles .circle3{position: absolute; bottom: 17%; right: 8%;padding: 34px 8px 0;}
+.circles .circle4{position: absolute; bottom: 15%; left: 8%;}
+.circles .circle3 a{ width: 80px; display: block;}
+.circles .circle3:hover{background-color:turquoise;padding-top:30px;font-size:21px;transform:scale(1.3);}
+.circles li a{ text-decoration: none; color: white;}
+
+/*하단 스크롤 애니메이션*/
+.scroll{ position: absolute;bottom: 0; left: 150px; padding-bottom: 110px;color: white;font-size: 10px; font-weight: 600;writing-mode: vertical-rl; text-transform: uppercase;}
+.scroll:before{content: ''; position: absolute;background: #fff;top: 65px;left: 50%;width: 7.5px; height: 7.5px;margin-left: -4px;border-radius:50%;animation-name: scrolling;animation-duration: 1.5s;animation-iteration-count: infinite;}
+ @keyframes scrolling{
+  0%{
+    transform: translate(0,0);
+    opacity: 1;
+  }
+  
+  100%{
+    transform: translate(0,80px);
+    opacity: 0;
+  }
+} 
+
+.scroll:after{ content: ''; position: absolute;bottom: 0; right: 50%; width: 1px;height: 83px; background-color: rgba(255, 255, 255, 0.5); transform: translateX(-50%) ;}
+/*페이지3*/
+#section3{position: relative;background-color: rgba(0, 0, 10, 0.63)}
+#section3 .bgphoto3{ background: url(../images/skyscrapers.jpg)no-repeat center/cover; width: 100%;height: 100vh;position: absolute; top: 0;z-index: -1;}
+.wrapper #section3 .promo h2{font-size: 4.1rem;line-height: 4.7rem; width: 720px;text-align:left;}
+.wrapper #section3 .promo p{margin: 0;text-align: left;}
+#section3 .box {position: absolute; top: 60%; right: 8%; height: 190px; display: flex; justify-content: space-between;}
+#section3 .box .boxes { color: white; background: rgba(0, 0, 5, 0.55);  width: 200px; height: 200px; padding: 15px; box-sizing: border-box; transition: 0.3s ease-in; transform-origin: bottom right ; margin: 0 10px; position: relative; /*for icon position*/}
+#section3 .box .boxes img{position: absolute; right: 15px; bottom: 15px;}
+
+/*페이지 4*/
+#section4{position: relative;background-color: rgba(0, 0, 10, 0.5);}
+#section4 .bgphoto4{width:100%; height:100vh;position: absolute; z-index: -1;background: url(../images/background-hand.png) no-repeat center/cover;}
+.wrapper #section4 .promo h2{font-size: 4.1rem;line-height: 4.7rem; width: 720px;text-align: left;}
+.wrapper #section4 .promo p{margin: 0;text-align: left;}
+.hand .hand_img{width: 300px;height: 300px;position: absolute;right: 25%;top: 30%;}
+.hand .diamonds .diamond{background: rgba(0, 0, 5, 0.55);  width: 150px; height: 150px;padding: 15px; transform:  rotate(45deg); box-sizing: border-box;color: white; position: absolute; display: flex; padding: 40px 10px 10px 40px; line-height: 25px;transition: 0.3s ease-in; position: absolute; top:0; right: 0;}
+.hand .diamonds .diamond:hover{ background-color: #156dfc; transform: scale(1.3) rotate(45deg);}
+.hand .diamonds .diamond1{top: 236px; right: 410px; transform-origin: bottom right;}
+.hand .diamonds .diamond2 {top: 255px; right: 244px;transform-origin: left bottom;}
+.hand .diamonds .diamond3 {top: 420px; right: 260px;transform-origin: top left;}
+.hand .diamonds .diamond3 a{padding-top: 10px;}
+.hand .diamonds .diamond4 {top: 402px; right: 423px;transform-origin: right top ;}
+.hand .diamonds .diamond #text-box{transform: rotate(-45deg);}
+.hand .diamonds .diamond a{color: white;text-decoration: none; display: block; width: 110px;}
+
+/*마지막 페이지*/
+#section5{width: 100%; height: 100vh;} 
+#section5 h2{font-size: 4.706rem; line-height: 5.5rem;text-transform: capitalize;font-weight: 800;margin-top: 0;}
+#section5 .neat .wrap{ border-top: 2px solid #020202;  width:365px; float: left; margin-right:3.906vw; box-sizing: border-box;}
+#section5 .neat .wrap:nth-of-type(3){margin-right: 0;}
+.wrap h4{font-size: .765rem; font-weight: 400;}
+.wrap h3{margin-top: 25px;font-size: 24px; line-height: 1.4;}
+.wrap .withdate{margin-top: 50px; display: flex;justify-content: space-between;}
+.wrap span{margin-top: 20px;font-size: 0.875rem;}
+.wrap .withdate p{font-size: 16px;font-weight: 300; /*말줄임*/white-space: nowrap; text-overflow: ellipsis;overflow: hidden; width: 250px;}
+.wrap .done{margin-top: 2px;}
+.wrap .done p{margin: 0;}
+.wrap .done span{margin: 0;}
+
+/*올라가기*/
+
+.arrowup a{text-indent: -9999px;background:rgba(0, 0, 10, 0.3) url(../svg/upload.svg)no-repeat center/contain; width: 50px; height:50px; position: fixed; bottom:40px;right: 35px;}
+/*푸터*/
+footer{border-top: 1px solid #e1e1e1; padding: 2vw 3vw;font-size: 0.875rem; font-weight: 500;height: 80px; width: 100%; overflow: hidden;}
+footer a{text-decoration: none; color: black;}
