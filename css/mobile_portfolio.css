@@ -1,0 +1,101 @@
+@charset "utf-8";
+@media screen and (max-width:1025px){
+  body{font-size: 1rem;}
+  .goal{margin: 0;}
+  .goal h1 .logo {
+    width: 350px;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+  .goal h2 {margin: 0; position: absolute;
+ top: 56.5%; left: 50%; transform: translateX(-50%);}
+  .goal ul { padding: 0; width: 400px;  position: absolute;top: 60%; left: 50%; transform: translateX(-50%); list-style: none;} 
+  .demo{position: absolute; top: 15%;}
+  .demo img {
+    width: 60%;
+  }
+  .wrapper {
+    margin-left: 20vw;
+  }
+  .style {
+    margin-left: 20vw;
+  }
+  .style .flex {
+    width: 90%;
+    display: initial;
+  }
+  .style .concept li { width: 420px; }
+  #two .line {left: 30%;}
+  .pad { padding-left: 100px;}
+}
+
+
+@media screen and (max-width:710px){
+  .wrapper { margin-left: 15vw;}
+  .goal h1 .logo{width: 230px; top: 11%;}
+  .goal h2 {top: 51%; font-size: 1.25rem;}
+  .goal ul{top: 55%;}
+  .style { margin-left: 15vw;}
+  .style .flex > p { padding-bottom: 40px}
+  .style .concept li{width: auto;display: initial;}
+  .style .concept p { margin-bottom: 15px;width: auto;}
+  .style .colorful {  margin-top: 60px;}
+  .style .colors{margin-top: 20px;}
+  .style .fonts {margin-top: 30px;}
+  .ex1,.ex2{display: none;}
+
+}
+@media screen and (max-width:548px){
+  .goal h2 {top: 48%;}
+  .goal ul {top: 51%;width: 380px;}
+  #two { padding: 20px; }
+  footer p{margin: 0;}
+  footer p:nth-child(2) { right: 20px; font-size: 10px;}
+}
+@media screen and (max-width:492px){
+  #two{border-bottom: none;}
+  .wrap { border: 4px solid #000; margin: 50px 20px;}
+  .demo { top: 17%;}
+  .goal ul { width: 80%;}
+  .goal ul li {margin-bottom: 15px;line-height: 1.25;}
+  .goal h1 .logo { width: 215px; top: 12%;}
+  .goal h2 { top: 47%;}
+  .style {margin-top: 100px;}
+
+  .line{display: none;}
+  .pad{padding-left: 0;}
+  .wrapper{margin: 50px 0;}
+  .size{line-height: 2;}
+  .pad h3{left: 5%;}
+  .pad > h3:nth-of-type(1) {top: -1%; font-size: 1.25rem;}
+  .pad > h3:nth-of-type(2) {top: 29.6%; font-size: 1.25rem;}
+  .stack li { margin-bottom: 10px; font-size:  0.9375rem;}
+
+  .style{margin: 120px 0 0 0 ;}
+  .style .flex > p {padding-bottom: 20px; font-size: 18px; width: auto;}
+  .style .flex > p:before{content: "01 ";}
+  .style .concept p {font-size: 0.9375rem;}
+  .style .colorful {margin-top: 20px;}
+  .style .colorful p{font-size: 18px; width: 200px;}
+  .style .colorful p:before{content: "02 ";}
+  .style .colorful .colors{background: none; height: 400px;}
+  .style .colors { margin-top: 40px;}
+  .colorful .colors span{display:block;width: 100px; height: 100px; border-radius: 50%; color: black;text-indent: initial; text-align: center; margin: auto;padding-top: 40px;box-sizing: border-box;margin-bottom: 20px;}
+  .colorful .colors span:nth-child(1){ background-color: #f40009;}
+  .colorful .colors span:nth-child(2){background-color: #b5b5b5;}
+  .colorful .colors span:nth-child(3){background-color: #000000; color: white;}
+  .style .fonts {margin-top: 10px;}
+  .fonts > p{font-size: 18px;}
+  .fonts > p:before{content: "03 ";}
+  .seperate { margin-top: 0px; }
+  .seperate p{margin-bottom: 2px;}
+  .button { margin: 40px auto 80px auto;display: flex;justify-content: center; align-items: center; flex-direction: column;}
+  .button a {width: 280px; border: 1px solid #000; margin: 10px;}
+  footer{padding: 20px; line-height: 0;height: 80px;}
+  footer p:first-child {border: 1px solid white; width: 250px; text-align: center; height: 40px; line-height: 40px;}
+  footer p:nth-child(2){bottom: 20px;}
+
+
+}

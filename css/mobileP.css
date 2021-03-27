@@ -1,0 +1,103 @@
+@charset "utf-8";
+@media screen and (max-width:520px){
+.section .wrap h1 {font-size: 3rem;}
+
+}
+
+@media screen and (max-width:414px){
+#myMenu .logo img {height: 60px;}
+#myMenu .logo { width: 150px;top: 18px;left: 15%;color: black;text-transform: uppercase; font-weight: 600; height: 30px; display: flex; align-items: center; font-size: 1.2rem;}
+#myMenu .logo img { position: absolute;top: -15px; left: -30px;}
+.navigation {clip-path: circle(15px at calc(100% - 60px) 29px)}
+.navigation .ham-btn {right: 45px;top: 14px; width: 30px; height: 30px;}
+.section .wrap h1 {font-size: 3rem;}
+/*2nd page*/
+.second .resume a p {left: 70%;font-size: 0.9rem;}
+}
+
+
+/*mobile 375*/
+@media screen and (max-width:376px){
+  /*navigation men bar*/
+.navigation {clip-path:circle(14px at calc(100% - 40px) 31px)}
+.navigation.active { clip-path:circle(100%);}
+.navigation .ham-btn { position:absolute; top:18px;right:26px; height:28px;border-radius:50%;cursor:pointer;}
+/*common*/
+.section{ width: 100%;  height: 100%; background: linear-gradient( 45deg,#fabb02 0%,#ffe645 100%);}
+#myMenu{background-color: #fff; height: 50px; position: fixed; top: 0; left: 0; z-index: 8;width: 100%;}
+#myMenu a.logo{ font-size: 1rem;position: fixed; top: 5px; padding-top: 10px; padding-left: 10px;}
+#myMenu .open { display: block;  position: absolute; top: 38px; right: 30px;cursor: pointer; z-index: 2}
+#myMenu .logo img {top: 2px; height: 50px; }
+#myMenu .add-heart {display: none;}
+#fp-nav ul {display: none;}
+
+.section .wrap h1 {font-size: 3.8em; text-align: center; font-weight: 500;}
+
+/*2nd page*/
+#fullpage #full { background: url(../images/beannieoriginal.jpg)no-repeat 50%/cover;}
+#fullpage .second{background: none}
+#fullpage .second::after{ height: 350px;background-color: rgba(0,0,10, 0.8);}
+#fullpage .wrap {width: 100%;  height: 100vh; }
+.second .resume h2 {font-size: 1.4rem;}
+.second .resume a p {font-size: 0.8rem; }
+.second .resume a p::after{width: 15px; height: 10px; z-index: 2; display: inline-block; padding-left: 15px;}
+.second .list {font-size: 0.8rem;top: 27%; font-weight: 300;}
+.list li p:nth-of-type(1) { display: none;}
+.list li p:nth-of-type(2) { font-size: 0.8rem;}
+
+  /*3rd page*/
+.third h2 { font-size: 1.7rem; top: 18%; left: 10%;}
+.third .article h2 span { position: absolute; display: block; width: 190px; right: 10%; line-height: 2.2;}
+.article .about p {  width: 300px;}
+.article .about p:first-child {  width: 300px; font-size: 0.9rem;}
+.article .hashtag {display: flex;top: 82%;}
+.article .hashtag li {width: 90px;font-size: 0.85rem;font-weight: 500;}
+
+/*4th page*/
+#fullpage .fourth { height: 150vh;}
+.contents { height: auto; display: flex; flex-direction: column;}
+.contents > p {display: block;position: absolute;top: 4%;font-size: 1.5em;text-transform: uppercase;font-weight: bold;}
+.contents h2:nth-of-type(1) {top: 12%;left: 50%; transform: translateX(-50%);width: max-content;}
+.contents h2:nth-of-type(2) { top: 75%; left: 50%;transform: translate(-50%, -61%); width: max-content;}
+.contents .language {position: absolute;top: 15%; width: auto;}
+.language li { display: flex; width: fit-content; margin: 20px;flex-direction: column; justify-content: center;align-items: center;}
+.language img { margin-right: 0px;}
+.language .explain { text-align: center;}
+.language .explain h3 {font-weight: 600; margin: 8px 0;}
+.language .explain p { width: 300px; font-size: 0.9rem; }
+.fourth .line {display: block; margin: 0;width: 1px;position: absolute;top: 66%;transform: rotate(90deg)}
+.graphics {width: auto;margin-top: 0px;  position: absolute;top: 80%;    left: 50%;
+  transform: translateX(-50%);}
+figure {margin: 15px 20px;width: 70px;text-align: center;font-weight: 600}
+.graphics p {width: 325px;font-size: 0.9rem;margin-bottom: 100px;}
+.graphics img {width: 38px;}
+
+/*last page*/
+.fp-viewing-section5-0 #myMenu {background-color: #fff;}
+#myMenu{background-color: #fff; height: 50px; position: fixed; top: 0; left: 0; z-index: 8;width: 100%;}
+.last .fp-controlArrow.fp-prev { display: none;}
+.last .fp-controlArrow.fp-next { display: none;}
+
+.one .see:after { content: "100% 디자인, 100% 퍼블리싱 반응형웹"; display: block; color: white; width: 337px; text-align: center; padding-top: 30px; font-size: 0.84rem;}
+
+.one .cocacola { text-align: left; margin-top: 40px; width: 90%;}
+.last #title { display: block; z-index: 2; position: absolute; top: 12%; left: 50%; transform: translateX(-50%); color:white; font-size: 2em;font-weight: 600;}
+.last h2 {font-size: 1.3rem; font-weight: 700; margin-bottom: 20px;}
+.one h2:before{ content:"01"; display: block; margin-bottom: 20px;}
+.last p{font-size: 0.8rem; font-weight: 500;margin-bottom: 50px;}
+.one .coke {  display: none;}
+.one .bridge{ background: url(../images/bridge.jpg) no-repeat center/ cover; height: 200px; }
+/*navigation color change*/
+/*slide 1*/
+.fp-viewing-section5-0 #myMenu .logo{color: black;}
+.fp-viewing-section5-0 .logo img:nth-of-type(1){display: block;left: -35px;}
+.fp-viewing-section5-0 #myMenu .logo img:nth-of-type(2){display: none;position: absolute; top:-5px;left: -50px;}
+.fp-viewing-section5-0 #myMenu ul li a{color: black;}
+
+/*slide 2*/
+.fp-viewing-section5-1 #myMenu .logo{color: black;}
+.fp-viewing-section5-1 .logo img:nth-of-type(1){display: block;}
+.fp-viewing-section5-1 #myMenu .logo img:nth-of-type(2){display: none;position: absolute; top:-5px;left: -50px;}
+.fp-viewing-section5-1 #myMenu ul li a{color:black;}
+
+}

@@ -1,0 +1,62 @@
+@charset "UTF-8";
+.demo{width: 50%;}
+.demo img {width: 59%;}
+.goal h1 .logo {width: 270px;}
+.seperate {width: 75%;}
+.fonts .seperate.wt{width: 72.2%;}
+.style .flex { width: 86%;}
+.style .concept li {width: 500px;margin-top: 20px;}
+.style .colorful { width: 81%;}
+.style .colorful .colors{background: none; display: flex;}
+.colorful .colors span{display:block;width: 110px; height: 110px; border-radius: 50%; color: black;text-indent: initial; text-align: center; margin: auto;padding-top: 45px;box-sizing: border-box;margin-bottom: 20px;}
+.colorful .colors span:nth-child(1){ background-color: #eb6101;}
+.colorful .colors span:nth-child(2){background-color: #ffffff; box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;}
+.colorful .colors span:nth-child(3){background-color: #000000; color: white;}
+
+@media screen and (max-width:1025px){
+  #one {height: 75vh;}
+  .pad > h3:nth-of-type(2) { top: 39%;}
+  .goal h1 .logo { width: 150px; top: 13%;}
+  .goal ul { width: 350px; top: 64.5%; font-size: 0.973rem;}
+  .demo {top: 17%;}
+  .demo img {width: 250px;}
+  .goal h2 {font-size: 1.2rem; top: 61%;}
+  .style .flex > p {margin-bottom: 35px;}
+  .colorful .colors span {width: 100px; height: 100px;padding-top: 40px;}
+}
+@media screen and (max-width:769px){
+  .demo img { width: 250px;}
+  .seperate .ex1, .seperate .ex2{display: none;}
+  .style .concept li {width: 420px;}
+
+}
+@media screen and (max-width:670px){
+  #one { height: 75vh;}
+  .demo img {width: 220px;}
+  .goal h2 {top: 57%;}
+  .goal ul{top:62%;}
+}
+
+@media screen and (max-width:492px){
+  .demo { width: 65%;}
+  .demo img {width: 240px;}
+  .style .colorful .colors {display: block;}
+  .pad > h3:nth-of-type(2) { top: 29%;}
+  .style {margin: 150px 0 0 0;}
+}
+
+@media screen and (max-width:376px){
+  #one { height: 68vh;}
+  .demo img {width: 220px;}
+  .goal h1 .logo { width: 170px;}
+  .goal h2{top: 51%;}
+  .goal ul { top: 55%; width: 300px;}
+  .pad > h3:nth-of-type(1) { font-size: 1.5rem;}
+  .pad > h3:nth-of-type(2) { top: 26%;font-size: 1.5rem;}
+  .style .concept li{font-size: 18px;}
+  .style .concept p { margin: 20px 0 40px;}
+  .fonts .seperate.wt{width: auto;}
+  .fonts .seperate{width: auto;}
+  .style .flex >p, .style .colorful > p, .style .fonts > p{font-size: 20px;}
+  .fonts > p {margin-bottom: 40px;}
+}

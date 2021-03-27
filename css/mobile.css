@@ -1,0 +1,120 @@
+@charset "utf-8";
+
+@media screen and (max-width:1367px){
+  /*메뉴*/
+nav ul{display: none;}
+.navigation {display: block;position:fixed; top:-5px; left:0px; width:100%; height:100%; background:rgba(0,0,10, 0.95); z-index:999; clip-path:circle(20px at calc(100% - 90px) 50px); transition:all 500ms ease-in-out;}
+.navigation.active { clip-path:circle(100%);}
+.navigation .ham-btn {position:absolute; top:31px; right:72px; width:36px; height:36px; border-radius:50%; cursor:pointer;}
+.navigation .ham-btn span { position:absolute; left:50%; transform:translate(-50%,-50%);width:50%;height:2px;background:#fff;transition:all 200ms ease-in-out;}
+.navigation .ham-btn span:nth-child(1) { top:30%; }
+.navigation .ham-btn span:nth-child(2) {top:50%;}
+.navigation .ham-btn span:nth-child(3) {top:70%;}
+.navigation.active .ham-btn span:nth-child(1) {top:50%; transform:translate(-50%,-50%) rotate(45deg);}
+.navigation.active .ham-btn span:nth-child(2) { display:none;}
+.navigation.active .ham-btn span:nth-child(3) {top:50%;transform:translate(-50%,-50%) rotate(-45deg);}
+.navigation .links { position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); text-align:center;}
+.navigation .links a { position:relative; display:inline-block; margin:30px 0px; font-size:45px; font-weight:600; text-decoration:none; color:#fff; text-transform:uppercase; letter-spacing:5px;}
+.navigation .links a:after { content:""; position:absolute; left:0px; bottom:-5px; height:3px; width:0%; background:tomato; transition:all 300ms ease-in-out;}
+.navigation .links a:hover:after { width:100%;}
+#myMenu{background-color: #fff; height: 70px; position: fixed; top: 0; left: 0; z-index: 8;width: 100%;}
+#myMenu .logo { width: 180px; top: 18px; left: 9%; color: black; text-transform: uppercase; font-weight: 600; height: 50px; display: flex; align-items: center; font-size: 1.6rem;}
+
+/*세로 페이지네이션*/
+.fp-viewing-section1 #fp-nav ul,.fp-viewing-section2 #fp-nav ul,.fp-viewing-section3 #fp-nav ul,.fp-viewing-section4 #fp-nav ul,.fp-viewing-section5-0 #fp-nav ul {margin: -10px;}
+
+/*하트*/
+#myMenu .add-heart {display: none;}
+.article .about p { width: 42vw;}
+.article .about p:first-child { width: 42vw;}
+
+/*4th page*/
+.contents {display: initial;  height: 730px;}
+.contents .language { margin-top: 0px; width: 470px;position: absolute;
+  top: 12%;
+  left: 50%;
+  transform: translateX(-50%); font-size: 0.8rem;}
+.contents h2:nth-of-type(1) {top: 10%;left: 50%;transform: translateX(-50%);}
+.language li {display: flex;width: auto;margin: 20px;}
+.language img { width: 55px; margin-right: 50px;}
+.language .explain {margin-top: 0px; }
+.language .explain p {width: auto; }
+.fourth .line { display: none;}
+.contents h2:nth-of-type(2) { top: 62%; left: 50%; transform: translate(-50%, -61%); width: max-content;}
+.graphics { width: auto; position: absolute;
+  top: 70%;transform:translateX(-50%);}
+.graphics img { width: 40px;}
+/*last page*/
+.fp-viewing-section5-0 #myMenu,.fp-viewing-section5-1 #myMenu ,.fp-viewing-section5-2 #myMenu{background-color: transparent;}
+.last .see a {  bottom: 0;transform: translate(-50%,14%) scale(1.5);}
+
+}
+
+
+@media screen and (max-width:769px){
+  /*navigation hamburger button*/
+.navigation {clip-path:circle(20px at calc(100% - 40px) 55px);transition:all 500ms ease-in-out;}
+.navigation.active {clip-path:circle(100%);}
+.navigation .ham-btn {  top:35px; right:20px; width:40px; height:40px; }
+/* .navigation .ham-btn span {
+ 
+  left:50%;
+  transform:translate(-50%,-50%);
+  width:50%;
+  height:2px;
+  background:#fff;
+  transition:all 200ms ease-in-out;
+} */
+.navigation .links a {  margin:24px 0px; font-size:30px; }
+.navigation .links a:after {height:2px;}
+.navigation .links a:hover:after {width:100%;}
+
+/*1st page*/
+body{font-family: 'AppleGothicNeo',sans-serif;}
+nav ul {display: none;}
+#fullpage .wrap { width: 84%; height: 85vh;}
+#myMenu .logo {position: absolute;top: 3.2vh; left: 1  }
+#fullpage .second{background: url(../images/beannieoriginal.jpg)no-repeat 100% /100%; position: relative;}
+#fullpage .second::after{ content: ""; width: 100%; height: 300px; background-color: rgba(0,0,10, 0.8); position: absolute; top: 5%; left: 0;}
+.section .wrap h1 {font-size: 5em;}
+.second .resume { width: max-content; position: initial;top: 0%;transform: none;left: 0%;}
+.second .resume h2 {color: white;position: absolute; top: 8%;left: 10%;z-index: 1;font-size: 1.5rem;}
+.second .resume > p{display: none;}
+.second .resume a p { color: white; position: absolute; top: 16%; left: 80%; width: max-content; z-index: 1; font-size: 1rem;}
+.second .resume a p::after{content: ""; background: url(../images/svg/arrowrt.svg) no-repeat center/contain; width: 20px; height: 15px;z-index: 2;display: inline-block;padding-left: 10px;}
+.second .list { font-size: 0.8rem; position: absolute; top: 25%; left: 7.5%; color: white; z-index: 1;}
+.second img { display: none;}
+
+
+/*3rd page*/
+.third{position: relative;}
+.third h2 { font-size: 2.5rem; position: absolute; top: 15%; left: 15%;}
+.third .article h2 span { position: absolute; display: block; width: 300px; left: 50%; line-height: 2.2;}
+.third .article .about {flex-direction: column;align-items: center;}
+.article .about p{width:485px;}
+.article .about p:first-child {margin-top: 70px; width: 485px;}
+.article .about .line {font-size: 20px;height: 20px;width: 20px;background-color: transparent; margin: 20px;}
+.article .hashtag { position: absolute; top: 80%; left: 50%; transform: translate(-50%, -80%);}
+
+/*4th page*/
+.contents { display: initial;  height: 730px;}
+.contents .language {margin-top: 20px; width: 470px;}
+.contents h2:nth-of-type(1) { top: 8%;left: 50%; transform: translateX(-50%);}
+.language li {display: flex; width: auto; margin: 20px;}
+.language img {width: 55px;margin-right: 50px;}
+.language .explain { margin-top: 0px; }
+.language .explain p {width: auto; }
+.fourth .line {transform: rotate(90deg);margin: 0;position: absolute; left: 50%;}
+.contents h2:nth-of-type(2) {top: 67%;left: 50%; transform: translate(-50%, -61%); width: max-content;}
+.graphics { width: auto;  margin-top: 20px;}
+.graphics img { width: 40px;}
+
+/*last page*/
+.last .see a{ bottom: -7%;}
+.cocacola .coke,.cocacola .bridge{text-indent: -9999px;}
+.one .cocacola {width: max-content;}
+.cocacola .bridge{display: block;}
+.osstem .implant, .osstem .logo{text-indent: -9999px;}
+.two .osstem { width: max-content;}
+
+}
